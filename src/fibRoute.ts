@@ -2,10 +2,10 @@
 
 import fibonacci from "./fib";
 
-export default (req, res) => {
-  const { num } = req.params;
+export default (req , res ) => {
+  const num:string = req.params;
 
-  const fibN = fibonacci(parseInt(num));
+  const fibN:number = fibonacci(parseInt(num));
   let result = `fibonacci(${num}) is ${fibN}`;
 
   if (fibN < 0) {
